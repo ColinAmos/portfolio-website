@@ -1,0 +1,134 @@
+html, body, p, h1, h2, h3, div {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 18px; // == 1rem
+}
+
+body {
+    min-height: 100%;
+    background: #25252C; // Body background color
+}
+
+p, h1, h2, h3, div {
+    color: white; // Default text color
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // Default font
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+.bodyGrid {
+    display: grid;
+    min-height: 100vh;
+    box-sizing: border-box; // Prevent padding from expanding total height
+    padding: 20px; // Space around the outside
+    //grid-gap: 10px; // Space between grid boxes
+    grid-template-columns: 250px auto;
+    grid-template-rows: 90px auto;
+    grid-template-areas:
+        "artistInfo navTabs"
+        "artistInfo tabContents";
+}
+
+.gridBox {
+    border: 2px dotted rgba(158, 158, 158, 0);
+    //border-radius: 5px;
+}
+
+.artistInfo {
+    grid-area: artistInfo;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 30px;
+}
+
+.profilePicture {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.artistName {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.artistDescription {
+    margin-top: 20px;
+}
+
+.navTabs {
+    grid-area: navTabs;
+
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 0px 20px 0px;
+    justify-content: space-between;
+}
+
+.navTab {
+    width: 24%;
+    border: 3px red solid;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    &:hover {
+        background: red;
+    }
+}
+
+.tabContents {
+    grid-area: tabContents;
+    border: 3px red solid;
+    border-radius: 10px;
+    padding: 0px 30px 30px 30px;
+}
+
+.contentHeader {
+    font-size: 1.5rem;
+    margin: 20px 0px 20px 0px;
+}
+
+.projectContent {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.projectImages {
+    width: 300px;
+    line-height: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.projectImage {
+    width: 100%;
+}
+
+.projectInfo {
+    flex-shrink: 1;
+    flex-grow: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 0 0 60px;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+// Magic number for when to start wrapping things to be vertical: 1000px wide
+
+
+
+

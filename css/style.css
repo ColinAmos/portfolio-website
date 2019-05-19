@@ -1,0 +1,164 @@
+html, body, p, h1, h2, h3, div {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 18px;
+}
+
+body {
+  min-height: 100%;
+  background: #25252C;
+}
+
+p, h1, h2, h3, div {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+.bodyGrid {
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  -ms-grid-columns: 250px auto;
+      grid-template-columns: 250px auto;
+  -ms-grid-rows: 90px auto;
+      grid-template-rows: 90px auto;
+      grid-template-areas: "artistInfo navTabs" "artistInfo tabContents";
+}
+
+.gridBox {
+  border: 2px dotted rgba(158, 158, 158, 0);
+}
+
+.artistInfo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: artistInfo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 30px;
+}
+
+.profilePicture {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.artistName {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.artistDescription {
+  margin-top: 20px;
+}
+
+.navTabs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: navTabs;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 30px 0px 20px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navTab {
+  width: 24%;
+  border: 3px red solid;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.navTab:hover {
+  background: red;
+}
+
+.tabContents {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: tabContents;
+  border: 3px red solid;
+  border-radius: 10px;
+  padding: 0px 30px 30px 30px;
+}
+
+.contentHeader {
+  font-size: 1.5rem;
+  margin: 20px 0px 20px 0px;
+}
+
+.projectContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.projectImages {
+  width: 300px;
+  line-height: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.projectImage {
+  width: 100%;
+}
+
+.projectInfo {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0 0 0 60px;
+  max-width: 500px;
+  min-width: 200px;
+}
+/*# sourceMappingURL=style.css.map */
