@@ -38,10 +38,19 @@ img {
     grid-template-areas:
         "artistInfo navTabs"
         "artistInfo tabContents";
+    // For narrow screens
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 100%;
+        grid-template-rows: 200px 90px auto;
+        grid-template-areas:
+            "artistInfo"
+            "navTabs"
+            "tabContents";
+    }
 }
 
 .gridBox {
-    border: 2px dotted rgba(158, 158, 158, 0);
+    border: 2px dotted rgba(8, 241, 20, 0);
     //border-radius: 5px;
 }
 
@@ -50,6 +59,20 @@ img {
     display: flex;
     flex-flow: column wrap;
     padding: 30px;
+    border: 2px dotted rgba(8, 241, 241, 0.801);
+    align-content: flex-start;
+}
+
+.artistText {
+    margin: 20px 0px 0px 0px;
+    @media screen and (max-width: 1000px) {
+        margin: 0px 0px 0px 30px;
+    }
+    border: 2px green dotted;
+    @media screen and (max-width: 1000px) {
+        max-width: 500px;
+        width: calc(100% - 150px);
+    }
 }
 
 .profilePicture {
@@ -59,9 +82,9 @@ img {
 }
 
 .artistName {
-    margin-top: 20px;
     font-size: 2rem;
     font-weight: normal;
+    line-height: 26px;
 }
 
 .artistDescription {
@@ -108,6 +131,10 @@ img {
 
 .projectImages {
     width: 300px;
+    height: 380px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     line-height: 0;
     flex-shrink: 0;
     flex-grow: 0;
@@ -125,6 +152,22 @@ img {
     margin: 0 0 0 60px;
     max-width: 500px;
     min-width: 200px;
+}
+
+.projectButtons {
+    margin: 20px 0 0 0;
+}
+
+.projectButton {
+    padding: 3px 10px;
+    border: 1px rgb(255, 255, 255) solid;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
 }
 
 // Magic number for when to start wrapping things to be vertical: 1000px wide

@@ -41,8 +41,18 @@ img {
       grid-template-areas: "artistInfo navTabs" "artistInfo tabContents";
 }
 
+@media screen and (max-width: 1000px) {
+  .bodyGrid {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 200px 90px auto;
+        grid-template-rows: 200px 90px auto;
+        grid-template-areas: "artistInfo" "navTabs" "tabContents";
+  }
+}
+
 .gridBox {
-  border: 2px dotted rgba(158, 158, 158, 0);
+  border: 2px dotted rgba(8, 241, 20, 0);
 }
 
 .artistInfo {
@@ -58,6 +68,27 @@ img {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   padding: 30px;
+  border: 2px dotted rgba(8, 241, 241, 0.801);
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.artistText {
+  margin: 20px 0px 0px 0px;
+  border: 2px green dotted;
+}
+
+@media screen and (max-width: 1000px) {
+  .artistText {
+    margin: 0px 0px 0px 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .artistText {
+    max-width: 500px;
+    width: calc(100% - 150px);
+  }
 }
 
 .profilePicture {
@@ -67,9 +98,9 @@ img {
 }
 
 .artistName {
-  margin-top: 20px;
   font-size: 2rem;
   font-weight: normal;
+  line-height: 26px;
 }
 
 .artistDescription {
@@ -132,6 +163,17 @@ img {
 
 .projectImages {
   width: 300px;
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   line-height: 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -160,5 +202,22 @@ img {
   margin: 0 0 0 60px;
   max-width: 500px;
   min-width: 200px;
+}
+
+.projectButtons {
+  margin: 20px 0 0 0;
+}
+
+.projectButton {
+  padding: 3px 10px;
+  border: 1px white solid;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.projectButton:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
