@@ -1,16 +1,4 @@
-
-// Media query mixins (desktop landscape default)
-@mixin forSquareWindow {
-    @media screen and (max-width: 1000px) {
-        @content;
-    }
-}
-@mixin forPortraitWindow {
-    @media screen and (max-width: 750px) {
-        @content;
-    }
-}
-
+// Generic ////////////////////////////////////
 
 html, body, p, h1, h2, h3, div {
     padding: 0;
@@ -41,160 +29,71 @@ img {
     padding: 0;
 }
 
-.bodyGrid {
-    display: grid;
-    min-height: 100vh;
-    box-sizing: border-box; // Prevent padding from expanding total height
-    padding: 20px; // Space around the outside
-    //grid-gap: 10px; // Space between grid boxes
-    grid-template-columns: 250px auto;
-    grid-template-rows: 90px auto;
-    grid-template-areas:
-        "artistInfo navTabs"
-        "artistInfo tabContents";
-    // For narrow screens
-    @include forSquareWindow() {
-        grid-template-columns: 100%;
-        grid-template-rows: 200px 90px auto;
-        grid-template-areas:
-            "artistInfo"
-            "navTabs"
-            "tabContents";
-    }
+// Specific classes ////////////////////////////
+
+.bg1 {
+    background: #25252C;
 }
 
-.gridBox {
-    border: 2px dotted rgba(119, 201, 123, 0);
-    //border-radius: 5px;
+.bg2 {
+    background: rgb(65, 43, 63);
 }
 
 .artistInfo {
-    grid-area: artistInfo;
     display: flex;
-    flex-flow: column wrap;
-    padding: 20px;
-    //border: 2px dotted rgba(8, 241, 241, 0.801);
-    align-content: flex-start;
-}
-
-.artistText {
-    //border: 2px green dotted;
-    margin: 20px 0px 0px 0px;
-    @include forSquareWindow() {
-        margin: 0px 30px 0px 30px;
-        max-width: 400px;
-        width: calc(100% - 150px - 30px);
-    }
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
 }
 
 .profilePicture {
-    width: 150px;
+    max-width: 150px;
     height: auto;
     border-radius: 50%;
+}
+
+.artistText {
+    
 }
 
 .artistName {
     font-size: 2rem;
     font-weight: normal;
-    line-height: 26px;
 }
 
 .artistDescription {
-    margin-top: 20px;
+
 }
 
-.navTabs {
-    grid-area: navTabs;
 
+.projectSection {
     display: flex;
     flex-flow: row wrap;
-    padding: 20px 0 0 0;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.navTab {
-    width: 24%;
-    border: 3px red solid;
-    border-radius: 10px;
-    background: transparent;
-    color: white;
-    font-size: 1rem;
-    &:hover {
-        background: red;
-    }
-    @include forPortraitWindow() {
-        width: 48.5%;
-        margin-bottom: 14px;
-    }
-    height: 46px;
-}
 
-.tabContents {
-    grid-area: tabContents;
-    border: 3px red solid;
-    border-radius: 10px;
-    padding: 20px 30px 30px 30px;
-    margin-left: 2px;
-    margin-right: 2px;
-    @include forPortraitWindow() {
-        margin-top: 60px;
-    }
-    
-}
-
-.contentHeader {
-    font-size: 1.5rem;
-    margin: 0px 0px 20px 0px;
-}
-
-.projectContent {
-    display: flex;
-    flex-flow: row nowrap;
-    @include forPortraitWindow() {
-        flex-flow: column nowrap;
-    }
-}
-
-.projectImages {
-    width: 300px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    line-height: 0;
-    flex-shrink: 0;
-    flex-grow: 0;
-    @include forPortraitWindow() {
-        width: 100%;
-    }
-}
-
-.projectImage {
-    width: 100%;
-    &:last-child {
-        margin-top: 20px;
-    }
+.projectImageCarousel {
+    width: 300px; // Default width / width in large window
+    max-width: 100%; // Stay within window width (overrides width)
+    background: blue;
+    margin-bottom: 26px !important; // This removes the blank space below the image-symbolizing dot symbols
 }
 
 .projectInfo {
-    flex-shrink: 1;
-    flex-grow: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0px 0px 0px 60px;
     max-width: 500px;
-    min-width: 200px;
-    @include forPortraitWindow() {
-        margin: 0px 0px 0px 0px;
-        min-width: 0px;
-    }
+}
+
+.projectTitle {
+    font-size: 1.5rem;
+    line-height: 1rem; // Removes space above text
 }
 
 .projectButtons {
-    margin: 20px 0 0 0;
 }
 
 .projectButton {
-    padding: 3px 10px;
+    padding: 3px 12px;
     border: 1px rgb(255, 255, 255) solid;
     border-radius: 10px;
     background: transparent;
@@ -205,7 +104,7 @@ img {
     }
 }
 
-// Plugin stuff
+// Plugin stuff ////////////////////////////////////
 
 .flex-direction-nav a  {
     line-height: 40px; // This is a bug fix
