@@ -1,3 +1,9 @@
+// Colors /////////////////////////////////////
+
+$cBG1: rgb(43, 43, 43);
+$cBG2: rgb(211, 33, 74);
+
+
 // Generic ////////////////////////////////////
 
 html, body, p, h1, h2, h3, div {
@@ -7,12 +13,12 @@ html, body, p, h1, h2, h3, div {
 
 html {
     height: 100%;
-    font-size: 18px; // == 1rem
+    font-size: 18px; // 1 rem = this
 }
 
 body {
     min-height: 100%;
-    background: #25252C; // Body background color
+    background: $cBG1; // Body background color
 }
 
 p, h1, h2, h3, div, button {
@@ -32,37 +38,61 @@ img {
 // Specific classes ////////////////////////////
 
 .bg1 {
-    background: #25252C;
+    background: $cBG1;
 }
 
 .bg2 {
-    background: rgb(65, 43, 63);
+    background: $cBG2;
 }
 
+// Spacing at the top and bottom of each section, including artistInfo
+$verticalSectionSpacing: 40px;
+$paragraphHorizontalSpacing: 30px;
+
+// Container for profilePicture + artistText
 .artistInfo {
     display: flex;
+    position: relative;
     flex-flow: column nowrap;
     align-items: center;
     text-align: center;
+    margin: $verticalSectionSpacing 0 0 0;
 }
 
+$profilePictureDiameter: 150px;
+
 .profilePicture {
-    max-width: 150px;
+    max-width: $profilePictureDiameter;
     height: auto;
     border-radius: 50%;
 }
 
+.profilePictureEffect {
+    // Styling
+    border-radius: 50%;
+    border: 2px $cBG2 solid;
+    // Formatting
+    position: absolute;
+    box-sizing: border-box;
+    $ppEffectSpacing: 10px;
+    width: $profilePictureDiameter + $ppEffectSpacing*2;
+    height: $profilePictureDiameter + $ppEffectSpacing*2;
+    top: -$ppEffectSpacing;
+}
+
+// Container for artistName + artistDescription
 .artistText {
-    
+    margin: 25px 0 $verticalSectionSpacing 0;
 }
 
 .artistName {
     font-size: 2rem;
     font-weight: normal;
+    line-height: 1rem;
 }
 
 .artistDescription {
-
+    margin: 25px $paragraphHorizontalSpacing 0px $paragraphHorizontalSpacing;
 }
 
 
@@ -70,18 +100,21 @@ img {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding: $verticalSectionSpacing 0px 0px 0px;
 }
-
 
 .projectImageCarousel {
     width: 300px; // Default width / width in large window
     max-width: 100%; // Stay within window width (overrides width)
     background: blue;
-    margin-bottom: 26px !important; // This removes the blank space below the image-symbolizing dot symbols
+    //margin-bottom: 26px !important; // This removes the blank space below the image-symbolizing dot symbols
+    margin-bottom: (26px + $verticalSectionSpacing - 12px) !important;
 }
 
+// Container for projectTitle, projectDescription, and projectButtons
 .projectInfo {
     max-width: 500px;
+    margin: 0 30px $verticalSectionSpacing 30px;
 }
 
 .projectTitle {
@@ -89,12 +122,18 @@ img {
     line-height: 1rem; // Removes space above text
 }
 
+.projectDescription {
+    margin: 20px 0 20px 0;
+}
+
 .projectButtons {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .projectButton {
     padding: 3px 12px;
-    border: 1px rgb(255, 255, 255) solid;
+    border: 2px rgb(255, 255, 255) solid;
     border-radius: 10px;
     background: transparent;
     color: white;
