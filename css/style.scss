@@ -65,24 +65,13 @@ $profilePictureDiameter: 150px;
     max-width: $profilePictureDiameter;
     height: auto;
     border-radius: 50%;
-}
-
-.profilePictureEffect {
-    // Styling
-    border-radius: 50%;
+    padding: 10px;
     border: 2px $cBG2 solid;
-    // Formatting
-    position: absolute;
-    box-sizing: border-box;
-    $ppEffectSpacing: 10px;
-    width: $profilePictureDiameter + $ppEffectSpacing*2;
-    height: $profilePictureDiameter + $ppEffectSpacing*2;
-    top: -$ppEffectSpacing;
 }
 
 // Container for artistName + artistDescription
 .artistText {
-    margin: 25px 0 $verticalSectionSpacing 0;
+    margin: 20px 0 $verticalSectionSpacing 0;
 }
 
 .artistName {
