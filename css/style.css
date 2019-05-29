@@ -32,7 +32,7 @@ img {
 }
 
 .bg2 {
-  background: #d3214a;
+  background: #c72044;
 }
 
 .artistInfo {
@@ -56,11 +56,12 @@ img {
   height: auto;
   border-radius: 50%;
   padding: 10px;
-  border: 2px #d3214a solid;
+  border: 2px #c72044 solid;
 }
 
 .artistText {
   margin: 20px 0 40px 0;
+  max-width: 100%;
 }
 
 .artistName {
@@ -88,14 +89,15 @@ img {
 }
 
 .projectImageCarousel {
-  width: 300px;
+  width: 500px;
   max-width: 100%;
-  background: blue;
+  border: none !important;
   margin-bottom: 54px !important;
 }
 
 .projectInfo {
-  max-width: 500px;
+  width: 500px;
+  max-width: 100%;
   margin: 0 30px 40px 30px;
 }
 

@@ -1,7 +1,7 @@
 // Colors /////////////////////////////////////
 
 $cBG1: rgb(43, 43, 43);
-$cBG2: rgb(211, 33, 74);
+$cBG2: rgb(199, 32, 68);
 
 
 // Generic ////////////////////////////////////
@@ -72,6 +72,7 @@ $profilePictureDiameter: 150px;
 // Container for artistName + artistDescription
 .artistText {
     margin: 20px 0 $verticalSectionSpacing 0;
+    max-width: 100%;
 }
 
 .artistName {
@@ -93,16 +94,16 @@ $profilePictureDiameter: 150px;
 }
 
 .projectImageCarousel {
-    width: 300px; // Default width / width in large window
+    width: 500px; // Default width / width in large window
     max-width: 100%; // Stay within window width (overrides width)
-    background: blue;
-    //margin-bottom: 26px !important; // This removes the blank space below the image-symbolizing dot symbols
-    margin-bottom: (26px + $verticalSectionSpacing - 12px) !important;
+    border: none !important;
+    margin-bottom: (26px + $verticalSectionSpacing - 12px) !important; // 26px is the amount of space needed to keep the nav dots from being outside of the element block
 }
 
 // Container for projectTitle, projectDescription, and projectButtons
 .projectInfo {
-    max-width: 500px;
+    width: 500px;
+    max-width: 100%;
     margin: 0 30px $verticalSectionSpacing 30px;
 }
 
