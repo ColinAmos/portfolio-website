@@ -13,7 +13,7 @@ html, body, p, h1, h2, h3, div {
 
 html {
     height: 100%;
-    font-size: 18px; // 1 rem = this
+    font-size: 17px; // 1 rem = this
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 
 p, h1, h2, h3, div, button {
     color: white; // Default text color
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; // Default font
+    font-family: "Roboto", sans-serif; // Default font
 }
 
 button {
@@ -109,7 +109,7 @@ $profilePictureDiameter: 150px;
 
 .projectTitle {
     font-size: 1.5rem;
-    line-height: 1rem; // Removes space above text
+    line-height: 1.2rem; // Removes space above text
 }
 
 .projectDescription {
@@ -128,8 +128,9 @@ $profilePictureDiameter: 150px;
     background: transparent;
     color: white;
     font-size: 1rem;
+    margin: 4px 4px 0px 0px;
     &:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.1);
     }
 }
 
