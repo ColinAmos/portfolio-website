@@ -86,25 +86,36 @@ $profilePictureDiameter: 150px;
 }
 
 
+
 .projectSection {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     padding: $verticalSectionSpacing 0px 0px 0px;
+    width: 100%;
+}
+
+// This flexslider carousel was a mess to get responsive so if it looks weird, let it be
+$projectHorizontalSpacing: 15px;
+
+.projectImageCarouselWrapper {
+    width: 500px; // Default width / width in large window
+    max-width: calc(100% - #{$projectHorizontalSpacing}*2); // For shrinking
+    margin: 0 $projectHorizontalSpacing; // For keeping proper space between it and projectInfo
+    
 }
 
 .projectImageCarousel {
-    width: 500px; // Default width / width in large window
-    max-width: 100%; // Stay within window width (overrides width)
+    width: 100%; 
     border: none !important;
-    margin-bottom: (26px + $verticalSectionSpacing - 12px) !important; // 26px is the amount of space needed to keep the nav dots from being outside of the element block
+    margin: 0 auto (26px + $verticalSectionSpacing - 12px) auto !important; // 26px is the amount of space needed to keep the nav dots from being outside of the element block
 }
 
 // Container for projectTitle, projectDescription, and projectButtons
 .projectInfo {
     width: 500px;
     max-width: 100%;
-    margin: 0 30px $verticalSectionSpacing 30px;
+    margin: 0 $projectHorizontalSpacing $verticalSectionSpacing $projectHorizontalSpacing;
 }
 
 .projectTitle {
