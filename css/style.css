@@ -128,7 +128,7 @@ img {
 
 .projectButton {
   padding: 3px 12px;
-  border: 2px white solid;
+  border: 2px solid;
   border-radius: 10px;
   background: transparent;
   color: white;
@@ -136,8 +136,28 @@ img {
   margin: 4px 4px 0px 0px;
 }
 
-.projectButton:hover {
-  background: rgba(0, 0, 0, 0.1);
+.projectButton.b2 {
+  border-color: #d21e46;
+}
+
+.projectButton.b2:hover {
+  background: #d21e46;
+}
+
+.projectButton.b2:active {
+  background: #d21e46;
+}
+
+.projectButton.b1 {
+  border-color: #323232;
+}
+
+.projectButton.b1:hover {
+  background: #323232;
+}
+
+.projectButton.b1:active {
+  background: #323232;
 }
 
 .flex-direction-nav a {

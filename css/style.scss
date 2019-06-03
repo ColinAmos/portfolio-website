@@ -131,14 +131,31 @@ $projectHorizontalSpacing: 15px;
 
 .projectButton {
     padding: 3px 12px;
-    border: 2px rgb(255, 255, 255) solid;
+    border: 2px solid;
     border-radius: 10px;
     background: transparent;
     color: white;
     font-size: 1rem;
     margin: 4px 4px 0px 0px;
+}
+
+.projectButton.b2 {
+    border-color: $cBG2;
     &:hover {
-        background: rgba(0, 0, 0, 0.1);
+        background: $cBG2;
+    }
+    &:active {
+        background: $cBG2;
+    }
+}
+
+.projectButton.b1 {
+    border-color: $cBG1;
+    &:hover {
+        background: $cBG1;
+    }
+    &:active {
+        background: $cBG1;
     }
 }
 

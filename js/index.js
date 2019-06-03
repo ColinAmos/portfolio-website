@@ -4,5 +4,8 @@ $(document).ready(function() {
     $('.flexslider').flexslider({
         animation: "slide"
     });
-    
+
+    $(".projectButton").each(function(index) {
+        this.title = "Open in a new tab";
+    });
 });
