@@ -32,7 +32,7 @@ img {
 }
 
 .bg2 {
-  background: #c72044;
+  background: #d21e46;
 }
 
 .artistInfo {
@@ -56,7 +56,7 @@ img {
   height: auto;
   border-radius: 50%;
   padding: 10px;
-  border: 2px #c72044 solid;
+  border: 2px #d21e46 solid;
 }
 
 .artistText {

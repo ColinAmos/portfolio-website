@@ -1,8 +1,7 @@
 // Colors /////////////////////////////////////
 
 $cBG1: rgb(50, 50, 50);
-$cBG2: rgb(199, 32, 68);
-
+$cBG2: rgb(210,30,70);
 
 // Generic ////////////////////////////////////
 
@@ -85,8 +84,6 @@ $profilePictureDiameter: 150px;
     margin: 25px $paragraphHorizontalSpacing 0px $paragraphHorizontalSpacing;
 }
 
-
-
 .projectSection {
     display: flex;
     flex-flow: row wrap;
@@ -150,6 +147,4 @@ $projectHorizontalSpacing: 15px;
 .flex-direction-nav a  {
     line-height: 40px; // This is a bug fix
 }
-
-
 
