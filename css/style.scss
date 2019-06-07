@@ -80,6 +80,10 @@ $profilePictureDiameter: 150px;
     line-height: 1rem;
 }
 
+.artistTitle {
+    margin: 25px $paragraphHorizontalSpacing 0px $paragraphHorizontalSpacing;
+}
+
 .artistDescription {
     margin: 25px $paragraphHorizontalSpacing 0px $paragraphHorizontalSpacing;
 }
