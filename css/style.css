@@ -56,7 +56,42 @@ img {
   height: auto;
   border-radius: 50%;
   padding: 10px;
-  border: 2px #d21e46 solid;
+  border: 3px transparent dotted;
+}
+
+#profilePictureBorder {
+  border-color: #d21e46;
+  position: absolute;
+  -webkit-animation-name: profilePicture;
+          animation-name: profilePicture;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes profilePicture {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes profilePicture {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
 
 .artistText {

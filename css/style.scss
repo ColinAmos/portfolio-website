@@ -63,7 +63,25 @@ $paragraphHorizontalSpacing: 30px;
     height: auto;
     border-radius: 50%;
     padding: 10px; // Space between image and border
-    border: 2px $cBG2 solid;
+    border: 3px transparent dotted; // Set color in profilePictureBorder style
+}
+
+#profilePictureBorder {
+    border-color: $cBG2;
+    position: absolute;
+    animation-name: profilePicture;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes profilePicture {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 // Container for artistName + artistDescription
